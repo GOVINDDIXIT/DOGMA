@@ -34,7 +34,7 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                Toast.makeText(DetailActivity.this,"Page started loading",Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailActivity.this,"Loading...",Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -42,8 +42,9 @@ public class DetailActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 progressBar.setVisibility(View.GONE);
                 webview.setVisibility(View.VISIBLE);
-                Toast.makeText(DetailActivity.this,"Page loaded",Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(DetailActivity.this,"Page loaded",Toast.LENGTH_SHORT).show();
+                String javaScript ="javascript:(function() { var a= document.getElementsByTagName('header');a[0].hidden='true';a=document.getElementsByClassName('page_body');a[0].style.padding='0px';})()";
+                webview.loadUrl(javaScript);
             }
         });
         webview.loadUrl(getIntent().getStringExtra("url"));

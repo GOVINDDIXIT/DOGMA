@@ -23,16 +23,17 @@
         style="@style/TextAppearance.AppCompat.Title"
         android:ellipsize="end"
         android:maxLines="1"
-        android:layout_marginTop="16dp"
-        android:text="This is our title of post. You can view the app"/>
+        android:textSize="20sp"
+        android:text="what is block chain technology"
+        android:layout_marginTop="16dp"/>
     <TextView
         android:id="@+id/postdescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxLines="2"
+        android:maxLines="15"
         android:ellipsize="end"
+        android:fontFamily="casual"
         android:layout_marginTop="8dp"
-        android:text="This is the description of the post you are viewing this in the app"
         style="@style/TextAppearance.AppCompat.Body2" />
     </LinearLayout>
 </android.support.v7.widget.CardView>

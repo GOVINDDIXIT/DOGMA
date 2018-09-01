@@ -73,12 +73,12 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<PostList> call, Response<PostList> response) {
                 PostList list=response.body();
                 recyclerView.setAdapter(new PostAdapter(MainActivity.this,list.getItems()));
-                Toast.makeText(MainActivity.this,"Success",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this,"Success",Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(Call<PostList> call, Throwable t) {
-                Toast.makeText(MainActivity.this,"Failure",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"Please turn on your mobile data or wifi",Toast.LENGTH_SHORT).show();
 
             }
         });
