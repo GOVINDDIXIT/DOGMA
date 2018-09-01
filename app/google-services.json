@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "835559482772",
+    "firebase_url": "https://worldfor-214612.firebaseio.com",
+    "project_id": "worldfor-214612",
+    "storage_bucket": "worldfor-214612.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835559482772:android:5a889cca702e4661",
+        "android_client_info": {
+          "package_name": "com.example.govind.techie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835559482772-63e53lqd5uvf1o4bjob411ie6p1golqh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.govind.techie",
+            "certificate_hash": "b0c0587159561e70b79b9ecd4c468402ebdfff29"
+          }
+        },
+        {
+          "client_id": "835559482772-pqr6vq35b47mnjscmgan41t1b60kip71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKquqNEmJoukCyBXfLxJnGsLtF0yZkt9Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835559482772-pqr6vq35b47mnjscmgan41t1b60kip71.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
