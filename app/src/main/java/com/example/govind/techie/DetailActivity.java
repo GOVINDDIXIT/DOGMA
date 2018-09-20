@@ -21,20 +21,21 @@ public class DetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        progressBar=findViewById(R.id.progressbar);
-        toolbar=findViewById(R.id.toolbar);
-        webview=findViewById(R.id.webview);
+        progressBar = findViewById(R.id.progressbar);
+        toolbar = findViewById(R.id.toolbar);
+        webview = findViewById(R.id.webview);
 
         setSupportActionBar(toolbar);
         webview.setVisibility(View.INVISIBLE);
         webview.getSettings().setJavaScriptEnabled(true);
+        //webview.getSettings().setBuiltInZoomControls(true);
+       // webview.getSettings().setUseWideViewPort(true);
         webview.setWebChromeClient(new WebChromeClient());
-        webview.setWebViewClient(new WebViewClient()
-        {
+        webview.setWebViewClient(new WebViewClient() {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                Toast.makeText(DetailActivity.this,"Loading...",Toast.LENGTH_SHORT).show();
+                //oast.makeText(DetailActivity.this, "Loading...", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -43,7 +44,7 @@ public class DetailActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.GONE);
                 webview.setVisibility(View.VISIBLE);
                 //Toast.makeText(DetailActivity.this,"Page loaded",Toast.LENGTH_SHORT).show();
-                String javaScript ="javascript:(function() { var a= document.getElementsByTagName('header');a[0].hidden='true';a=document.getElementsByClassName('page_body');a[0].style.padding='0px';})()";
+                String javaScript = "javascript:(function() { var a= document.getElementsByTagName('header');a[0].hidden='true';a=document.getElementsByClassName('page_body');a[0].style.padding='0px';})()";
                 webview.loadUrl(javaScript);
             }
         });

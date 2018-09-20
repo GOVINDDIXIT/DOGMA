@@ -1,5 +1,7 @@
 package com.example.govind.techie;
 
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -10,7 +12,15 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.govind.techie.Labels.Android;
+import com.example.govind.techie.Labels.BlockChain;
+import com.example.govind.techie.Labels.Competitive;
+import com.example.govind.techie.Labels.MachineLearning;
+import com.example.govind.techie.Labels.React;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,7 +29,9 @@ import retrofit2.Response;
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
+    TextView textView;
     Toolbar toolbar;
+    WebView webview;
     ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
     RecyclerView recyclerView;
@@ -28,10 +40,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         recyclerView=findViewById(R.id.postList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        /* Custom Font
+        Typeface myTypeFace = Typeface.createFromAsset(getAssets(), "fonts/slabo.ttf");
+        textView = (TextView) findViewById(R.id.postTitle);
+        textView.setTypeface(myTypeFace);*/
+
         setUpToolbar();
+
+
         navigationView = findViewById(R.id.navigation_menu);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -40,7 +61,27 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_home:
                         Toast.makeText(MainActivity.this,"Clicked Home",Toast.LENGTH_SHORT).show();
                     case R.id.nav_android:
-                        Toast.makeText(MainActivity.this,"Clicked Android",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(MainActivity.this, Android.class));
+                        break;
+                    case R.id.nav_blockchain:
+                        startActivity(new Intent(MainActivity.this, BlockChain.class));
+                        break;
+                    case R.id.nav_competitve_coding:
+                        startActivity(new Intent(MainActivity.this, Competitive.class));
+                        break;
+                    case R.id.nav_flutter:
+                        Toast.makeText(MainActivity.this,"No article on flutter ",Toast.LENGTH_SHORT).show();
+                    case R.id.nav_machine_learning:
+                        startActivity(new Intent(MainActivity.this, MachineLearning.class));
+                        break;
+                    case R.id.nav_react:
+                        startActivity(new Intent(MainActivity.this, React.class));
+                        break;
+                    case R.id.nav_aboutus: {
+                        startActivity(new Intent(MainActivity.this, AboutPage.class));
+                        break;
+                    }
+
 
                 }
                 return false;
@@ -49,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         getData();
+
     }
 
     private void setUpToolbar()
@@ -78,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<PostList> call, Throwable t) {
-                Toast.makeText(MainActivity.this,"Please turn on your mobile data or wifi",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this,"No Internet Connection Found",Toast.LENGTH_SHORT).show();
 
             }
         });

@@ -42,7 +42,13 @@
             android:name=".Activities.flutter"
             android:label="@string/title_activity_flutter"
             android:theme="@style/AppTheme" />
-        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".AboutUs" />
+        <activity android:name=".AboutPage" />
+        <activity android:name=".Labels.Android" />
+        <activity android:name=".Labels.BlockChain" />
+        <activity android:name=".Labels.Competitive" />
+        <activity android:name=".Labels.MachineLearning" />
+        <activity android:name=".Labels.React"></activity>
     </application>
 
 </manifest>
