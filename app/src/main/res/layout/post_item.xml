@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         style="@style/TextAppearance.AppCompat.Title"
         android:ellipsize="end"
-        android:maxLines="1"
+        android:maxLines="2"
         android:textSize="20sp"
         android:text="what is block chain technology"
         android:layout_marginTop="16dp"/>

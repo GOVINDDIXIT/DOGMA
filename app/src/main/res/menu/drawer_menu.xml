@@ -10,14 +10,31 @@
         android:id="@+id/nav_android"
         android:title="Android">
     </item>
+        <item
+            android:id="@+id/nav_blockchain"
+            android:title="BlockChain">
+
+        </item>
+        <item
+            android:id="@+id/nav_competitve_coding"
+            android:title="Competitive">
+        </item>
     <item
-        android:id="@+id/nav_ios"
-        android:title="iOS">
+        android:id="@+id/nav_flutter"
+        android:title="Flutter">
     </item>
+        <item
+            android:id="@+id/nav_machine_learning"
+            android:title="Machine Learning">
+        </item>
     <item
-        android:id="@+id/nav_news"
-        android:title="News">
+        android:id="@+id/nav_react"
+        android:title="React">
     </item>
+
+
+
+
     </group>
     <group android:checkableBehavior="single"
         android:id="@+id/group2">
