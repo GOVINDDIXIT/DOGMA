@@ -15,6 +15,7 @@ public class AboutPage extends AppCompatActivity implements View.OnClickListener
     private LinearLayout GovindGithub;
     private LinearLayout email;
     private LinearLayout sendArticle;
+    private LinearLayout website;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +26,12 @@ public class AboutPage extends AppCompatActivity implements View.OnClickListener
         GovindGithub = findViewById(R.id.Govind_about);
         email = findViewById(R.id.write_an_email);
         sendArticle=findViewById(R.id.Submit_article);
+        website=findViewById(R.id.website);
         fork.setOnClickListener((View.OnClickListener) this::onClick);
         GovindGithub.setOnClickListener((View.OnClickListener) this::onClick);
         email.setOnClickListener((View.OnClickListener) this::onClick);
         sendArticle.setOnClickListener((View.OnClickListener) this::onClick);
+        website.setOnClickListener((View.OnClickListener)this::onClick);
         }
 
 
@@ -47,6 +50,8 @@ public class AboutPage extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.Submit_article:
                 sendMail();
+            case R.id.website:
+                 openWebPage(getResources().getString(R.string.Website));
             default:
                 break;
         }
