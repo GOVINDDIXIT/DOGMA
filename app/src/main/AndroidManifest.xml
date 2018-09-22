@@ -4,6 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_round"
@@ -38,17 +43,16 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-        <activity
-            android:name=".Activities.flutter"
-            android:label="@string/title_activity_flutter"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".AboutUs" />
+
+
         <activity android:name=".AboutPage" />
         <activity android:name=".Labels.Android" />
         <activity android:name=".Labels.BlockChain" />
         <activity android:name=".Labels.Competitive" />
         <activity android:name=".Labels.MachineLearning" />
-        <activity android:name=".Labels.React"></activity>
+        <activity android:name=".Labels.React" />
+
+        <activity android:name=".Login"></activity>
     </application>
 
 </manifest>
