@@ -17,6 +17,7 @@ public class AboutPage extends AppCompatActivity implements View.OnClickListener
     private LinearLayout sendArticle;
     private LinearLayout website;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

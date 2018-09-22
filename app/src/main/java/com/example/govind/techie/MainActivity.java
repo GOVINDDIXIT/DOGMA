@@ -77,6 +77,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_react:
                         startActivity(new Intent(MainActivity.this, React.class));
                         break;
+                    case R.id.nav_logOut:
+                        startActivity(new Intent(MainActivity.this, LogOut.class));
+                        break;
                     case R.id.nav_aboutus: {
                         startActivity(new Intent(MainActivity.this, AboutPage.class));
                         break;

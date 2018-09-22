@@ -43,16 +43,14 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-
-
         <activity android:name=".AboutPage" />
         <activity android:name=".Labels.Android" />
         <activity android:name=".Labels.BlockChain" />
         <activity android:name=".Labels.Competitive" />
         <activity android:name=".Labels.MachineLearning" />
         <activity android:name=".Labels.React" />
-
-        <activity android:name=".Login"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".LogOut"></activity>
     </application>
 
 </manifest>
