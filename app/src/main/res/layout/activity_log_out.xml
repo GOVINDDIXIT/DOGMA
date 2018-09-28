@@ -14,10 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="127dp"
-        android:textColor="#880E4F"
-        android:background="@drawable/round_button"
-        android:text="LogOut" />
+        android:layout_marginBottom="117dp"
+        android:text="LogOut"
+        android:textColor="#880E4F" />
 
     <Button
         android:id="@+id/linktoBlogBtn"
@@ -25,26 +24,47 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="197dp"
-        android:background="@drawable/round_button"
-        android:textColor="#1B5E20"
-        android:text="Visit Blog" />
+        android:layout_marginBottom="187dp"
+        android:text="Visit Blog"
+        android:textColor="#1B5E20" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/user_image"
         android:layout_width="124dp"
         android:layout_height="148dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
-        app:srcCompat="@drawable/launch" />
+        android:layout_marginTop="72dp"
+         />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="234dp"
+        android:text="user_name"
+        android:textColor="#FFD700"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_centerHorizontal="true"
+        android:text="user_email"
+        android:textColor="#FFD700"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView2"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="@string/app_name"
         android:textColor="#FFD700"
         android:textSize="30sp" />

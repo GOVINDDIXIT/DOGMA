@@ -1,7 +1,9 @@
 package com.example.govind.techie;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -80,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_logOut:
                         startActivity(new Intent(MainActivity.this, LogOut.class));
                         break;
+                    case R.id.Submit_article:
+                        sendArticle();
+                        break;
                     case R.id.nav_aboutus: {
                         startActivity(new Intent(MainActivity.this, AboutPage.class));
                         break;
@@ -94,6 +99,19 @@ public class MainActivity extends AppCompatActivity {
 
         getData();
 
+    }
+
+    private void sendArticle() {
+
+        String mailto = "mailto:developer8work@gmail.com?subject=Article Submission";
+
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse(mailto));
+        try {
+            startActivity(emailIntent);
+        } catch (ActivityNotFoundException e) {
+            //TODO: Handle case where no email app is available
+        }
     }
 
     private void setUpToolbar()

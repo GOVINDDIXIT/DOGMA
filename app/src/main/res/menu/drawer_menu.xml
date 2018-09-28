@@ -31,13 +31,18 @@
         android:id="@+id/nav_react"
         android:title="React">
     </item>
-
-
-
-
     </group>
+
     <group android:checkableBehavior="single"
-        android:id="@+id/group2">
+        android:id="@+id/group3">
+        <item
+            android:id="@+id/Submit_article"
+            android:title="Submit your article">
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single"
+    android:id="@+id/group2">
     <item
         android:id="@+id/nav_logOut"
         android:title="Log Out">

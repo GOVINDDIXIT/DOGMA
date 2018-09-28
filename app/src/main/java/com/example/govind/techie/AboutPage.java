@@ -50,9 +50,11 @@ public class AboutPage extends AppCompatActivity implements View.OnClickListener
                 sendMail();
                 break;
             case R.id.Submit_article:
-                sendMail();
+                sendArticle();
+                break;
             case R.id.website:
                  openWebPage(getResources().getString(R.string.Website));
+                 break;
             default:
                 break;
         }
@@ -61,6 +63,19 @@ public class AboutPage extends AppCompatActivity implements View.OnClickListener
     private void sendMail() {
 
         String mailto = "mailto:developer8work@gmail.com";
+
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+        emailIntent.setData(Uri.parse(mailto));
+        try {
+            startActivity(emailIntent);
+        } catch (ActivityNotFoundException e) {
+            //TODO: Handle case where no email app is available
+        }
+    }
+
+    private void sendArticle() {
+
+        String mailto = "mailto:developer8work@gmail.com?subject=Article Submission";
 
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse(mailto));
