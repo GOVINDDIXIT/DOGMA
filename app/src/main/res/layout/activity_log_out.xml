@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="117dp"
+        android:layout_marginBottom="269dp"
         android:text="LogOut"
         android:textColor="#880E4F" />
 
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="187dp"
+        android:layout_marginBottom="325dp"
         android:text="Visit Blog"
         android:textColor="#1B5E20" />
 
@@ -57,16 +57,5 @@
         android:text="user_email"
         android:textColor="#FFD700"
         android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/app_name"
-        android:textColor="#FFD700"
-        android:textSize="30sp" />
 
 </RelativeLayout>

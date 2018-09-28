@@ -62,6 +62,7 @@ public class LogOut extends AppCompatActivity {
         });
     }
 
+    //To set the user profile, fetch email, image, Name of the user
     private void setupUserProfile() {
         currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         username = findViewById(R.id.user_name);
@@ -89,9 +90,10 @@ public class LogOut extends AppCompatActivity {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
+
     public void openWebPage(String url) {
-        Toast.makeText(LogOut.this, "Wait a while....", Toast.LENGTH_SHORT).show();
-        Intent implicit = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        startActivity(implicit);
-    }
+    Toast.makeText(LogOut.this, "Wait a while....", Toast.LENGTH_SHORT).show();
+    Intent implicit = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+    startActivity(implicit);
+}
 }

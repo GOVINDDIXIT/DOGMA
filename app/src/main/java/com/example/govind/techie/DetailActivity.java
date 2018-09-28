@@ -35,7 +35,7 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
                 super.onPageStarted(view, url, favicon);
-                //oast.makeText(DetailActivity.this, "Loading...", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(DetailActivity.this, "Loading...", Toast.LENGTH_SHORT).show();
             }
 
             @Override
