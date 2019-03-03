@@ -28,11 +28,12 @@ public class AboutPage extends AppCompatActivity implements View.OnClickListener
         email = findViewById(R.id.write_an_email);
         sendArticle=findViewById(R.id.Submit_article);
         website=findViewById(R.id.website);
-        fork.setOnClickListener((View.OnClickListener) this::onClick);
-        GovindGithub.setOnClickListener((View.OnClickListener) this::onClick);
-        email.setOnClickListener((View.OnClickListener) this::onClick);
-        sendArticle.setOnClickListener((View.OnClickListener) this::onClick);
-        website.setOnClickListener((View.OnClickListener)this::onClick);
+
+        fork.setOnClickListener(this);
+        GovindGithub.setOnClickListener(this);
+        email.setOnClickListener(this);
+        sendArticle.setOnClickListener(this);
+        website.setOnClickListener(this);
         }
 
 
@@ -61,7 +62,6 @@ public class AboutPage extends AppCompatActivity implements View.OnClickListener
     }
 
     private void sendMail() {
-
         String mailto = "mailto:developer8work@gmail.com";
 
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);

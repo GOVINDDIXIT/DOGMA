@@ -1,15 +1,10 @@
 package com.example.govind.techie.Labels;
 
-import android.graphics.Bitmap;
-import android.provider.Browser;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.webkit.WebChromeClient;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
 
 import com.example.govind.techie.R;
 

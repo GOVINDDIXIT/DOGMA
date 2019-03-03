@@ -36,12 +36,7 @@ public class LogOut extends AppCompatActivity {
         setContentView(R.layout.activity_log_out);
         setupUserProfile();
         LinkToBlogBtn = findViewById(R.id.linktoBlogBtn);
-        LinkToBlogBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                openWebPage(getResources().getString(R.string.Website));
-            }
-        });
+        LinkToBlogBtn.setOnClickListener(View ->openWebPage(getResources().getString(R.string.Website)));
 
         mAuth=FirebaseAuth.getInstance();
        mAuthListener = new FirebaseAuth.AuthStateListener() {
