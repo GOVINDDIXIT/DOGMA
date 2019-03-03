@@ -32,6 +32,8 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    static String currentTheme;
+
     DrawerLayout drawerLayout;
     TextView textView;
     Toolbar toolbar;
@@ -44,8 +46,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
             setTheme(R.style.darkTheme);
+            currentTheme = "DarkTheme";
+        } else {
+            setTheme(R.style.lightTheme);
+            currentTheme = "LightTheme";
         }
-        else setTheme(R.style.AppTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

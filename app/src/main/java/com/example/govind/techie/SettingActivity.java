@@ -10,11 +10,15 @@ import android.widget.Toolbar;
 
 public class SettingActivity extends AppCompatActivity {
     private Switch mswitch;
-    private Toolbar toolbar;
+    private android.support.v7.widget.Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(MainActivity.currentTheme.equals("DarkTheme"))
+            setTheme(R.style.darkTheme);
+        else
+            setTheme(R.style.lightTheme);
         setContentView(R.layout.activity_setting);
 
         toolbar=findViewById(R.id.toolbar);

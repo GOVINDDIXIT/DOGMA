@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
 
     <!--Light theme-->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="lightTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#2196F3</item>
         <item name="colorPrimaryDark">#263547</item>
@@ -36,7 +36,7 @@
         <item name="colorPrimary">#212121</item>
         <item name="colorPrimaryDark">#263547</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="cardBackgroundcolor">#424242</item>
+        <item name="cardBackgroundcolor">#000000</item>
         <item name="backgroundcolor">#303030</item>
         <item name="tintcolor">#FFFFFF</item>
         <item name="textcolor">#FFFFFF</item>
