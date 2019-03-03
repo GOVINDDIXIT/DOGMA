@@ -12,9 +12,14 @@
         android:id="@+id/LogOutBtn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="269dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="426dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="185dp"
         android:text="LogOut"
         android:textColor="#880E4F" />
 
@@ -22,9 +27,14 @@
         android:id="@+id/linktoBlogBtn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="325dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="241dp"
         android:text="Visit Blog"
         android:textColor="#1B5E20" />
 

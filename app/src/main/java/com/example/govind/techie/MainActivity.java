@@ -8,11 +8,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatDelegate;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if(AppCompatDelegate.getDefaultNightMode()==AppCompatDelegate.MODE_NIGHT_YES){
+            setTheme(R.style.darkTheme);
+        }
+        else setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -81,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_logOut:
                         startActivity(new Intent(MainActivity.this, LogOut.class));
                         break;
+                    case R.id.nav_setting:
+                        startActivity(new Intent(MainActivity.this, SettingActivity.class));
+                        break;
                     case R.id.Submit_article:
                         sendArticle();
                         break;
@@ -92,8 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
         getData();
 
     }
