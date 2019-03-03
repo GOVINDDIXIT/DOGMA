@@ -2,9 +2,7 @@ package com.example.govind.techie;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -23,6 +21,7 @@ import com.example.govind.techie.Labels.BlockChain;
 import com.example.govind.techie.Labels.Competitive;
 import com.example.govind.techie.Labels.MachineLearning;
 import com.example.govind.techie.Labels.React;
+import com.example.govind.techie.Models.PostList;
 
 import retrofit2.Call;
 import retrofit2.Callback;

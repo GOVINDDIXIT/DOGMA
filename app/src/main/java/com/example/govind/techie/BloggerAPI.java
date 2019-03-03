@@ -1,5 +1,7 @@
 package com.example.govind.techie;
 
+import com.example.govind.techie.Models.PostList;
+
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

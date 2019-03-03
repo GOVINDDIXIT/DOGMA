@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "835559482772-c827rndiakq6lo8ehn79vvv4l6vkricq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.govind.techie",
+            "certificate_hash": "73a8a0dd7ed721d7804e0747d745b75bfb6265bf"
+          }
+        },
+        {
           "client_id": "835559482772-pqr6vq35b47mnjscmgan41t1b60kip71.apps.googleusercontent.com",
           "client_type": 3
         }

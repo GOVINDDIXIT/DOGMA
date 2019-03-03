@@ -1,7 +1,9 @@
 
-package com.example.govind.techie;
+package com.example.govind.techie.Models;
 
 import java.util.List;
+
+import com.example.govind.techie.Models.Item;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
